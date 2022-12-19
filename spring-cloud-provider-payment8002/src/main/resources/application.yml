@@ -1,0 +1,25 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: spring-cloud-payment-service
+  datasource:
+    password: spl8511317
+    url: jdbc:mysql://localhost:3306/piao
+    username: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: org.piao.springcloud.entities #所有Entity别名包所在的类
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    instance-id: payment8002
+    prefer-ip-address: true #访问路径可以显示ip地址

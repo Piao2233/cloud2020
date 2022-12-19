@@ -1,0 +1,18 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: spring-cloud-payment-service
+  datasource:
+    password: spl8511317
+    url: jdbc:mysql://localhost:3306/piao
+    username: root
+    type: com.alibaba.druid.pool.DruidDataSource
+  cloud:
+    zookeeper:
+      connect-string: 47.96.167.233:2181
+
+#mybatis:
+#  mapper-locations: classpath:mapper/*.xml
+#  type-aliases-package: org.piao.springcloud.entities #所有Entity别名包所在的类

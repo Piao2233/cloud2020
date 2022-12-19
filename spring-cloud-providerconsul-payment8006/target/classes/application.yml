@@ -1,0 +1,17 @@
+server:
+  port: 8006
+
+spring:
+  application:
+    name: spring-cloud-payment-service
+  datasource:
+    password: spl8511317
+    url: jdbc:mysql://localhost:3306/piao
+    username: root
+    type: com.alibaba.druid.pool.DruidDataSource
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
