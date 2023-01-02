@@ -18,7 +18,7 @@ import javax.annotation.Resource;
 public class MessageProviderImpl implements IMessageProvider {
 
     @Resource
-    private MessageChannel messageChannel; // 消息发送管道
+    private MessageChannel output; // 消息发送管道
 
     /**
      * @return
@@ -26,6 +26,8 @@ public class MessageProviderImpl implements IMessageProvider {
     @Override
     public String send() {
         String serial = UUID.randomUUID().toString();
-        messageChannel.send(MessageBuilder.withPayload(serial).build());
+        output.send(MessageBuilder.withPayload(serial).build());
+        System.out.println("**********serial" + serial);
+        return null;
     }
 }
