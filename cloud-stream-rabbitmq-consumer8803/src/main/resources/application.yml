@@ -1,8 +1,8 @@
 server:
-  port: 8802
+  port: 8803
 spring:
   application:
-    name: cloud-stream-consumer
+    name: cloud-stream-consumer8803
   cloud:
     stream:
       binders: #在此处配置要绑定的rabbitmq的服务信息：
@@ -33,5 +33,5 @@ eureka:
   instance:
     lease-renewal-interval-in-seconds: 2 #设置心跳的时间间隔（默认是30s）
     lease-expiration-duration-in-seconds: 5 #如果现在超过了5秒的时间（默认是90s）
-    instance-id: receive-8802.com #在信息列表显示主机的名称
+    instance-id: receive-8803.com #在信息列表显示主机的名称
     prefer-ip-address: true #访问的路径变为ip地址
